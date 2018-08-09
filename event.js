@@ -77,6 +77,9 @@ console.log(hasPlayedListener)
 
 console.log(life.listeners('求安慰').length)
 console.log(EventEmitter.listenerCount(life, '求安慰'))
-life.removeAllListeners()
+life.removeAllListeners('求安慰')
 console.log(EventEmitter.listenerCount(life, '求安慰'))
+console.log(EventEmitter.listenerCount(life, '求溺爱'))
+life.removeAllListeners()
+console.log(EventEmitter.listenerCount(life, '求溺爱'))
 
