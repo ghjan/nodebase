@@ -45,7 +45,8 @@ function filterChapters(html) {
     //     }]
     // }
     var title = $('div.course-infos > div.w.pr > div.hd.clearfix > h2').text().trim()
-    var number = parseInt($('div.course-infos span.meta-value.js-learn-num').text().trim(), 10)
+    // var number = parseInt($($('.info_num i')[0]).text().trim(), 10)
+    var number = parseInt($('#main > div.course-infos > div.w.pr > div.statics.clearfix > div:nth-child(4) > span.meta-value.js-learn-num').text().trim(),10)
     var courseData = {
         title: title,
         number: number,
